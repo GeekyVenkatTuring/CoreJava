@@ -76,7 +76,7 @@ Object set(int index,Object new)-this will replace the element at given index an
 
 Set:
 
-Set interface is the unordered collection which implements Collection.It allows duplicate values
+Set interface is the unordered collection which implements Collection.It doesn't allow duplicate values
 This is implemented by HashSet,LinkedHashSet or TreeSet
 
 Queue interface:
@@ -102,6 +102,46 @@ poll()
 peek()
 peekFirst()
 peekLast()
+
+
+LinkedList:
+LinkedList class implements List and Deque interfaces.Deque interface extends Queue interface which means the LinkedList is used for Queue implementation
+LinkedList in java build on the concept of doubly linked list where it has both previous and next pointers
+All the methods are implemented in the LinkedList.insertion and removal are fast in the linkedlist where are searching an element takes o(n)
+
+
+ArrayList:
+ArrayList is implemented on the concept of dynamic array whose size changes dynamically based on the input size
+It may be little slow compared to primitive arrays but as it is collection we have lot of predefined methods that use it modify the dataset
+It implements List interface.As we have indexes specified ,we can access the element quickly compared to LinkedList
+
+Vector:
+Vector is very similar to ArrayList but it is synchonized
+
+Stack:
+Stack in java based on stack data structure.It uses the Last in First Out principle
+Stack implements List and extends Vector.It has basic methods like push ,pop,clear,remove methods
+
+HashSet:
+HashSet implements Set interface.It doesn't allow duplicates and it is unordered collection
+HashSet implemented using HashMap
+Whenever we create HashSet,it internally creates HashMap and put all elements as keys in that HashMap and values of HashMap are set as Present
+As you know,HashMap allows atmost one null key which means that HashSet allows only atmost one null value
+As you know HashMap doesn't allow duplicate keys,which means that HashSet doesn't allow duplicate elements
+HashMap put and get methods are used internally for add() and remove() methods of HashSet
+
+Sorting HashSet elements:
+HashSet doesn't gurantee the order of elements ,hence most of the cases it is unsorted
+To sort the HashSet elements,you can create auxiliary data strcture List and use Collections.sort(List) to sort those elements
+
+But if you want sort the HashSet elements permanently,we will use TreeSet class
+
+
+TreeSet:
+TreeSet similar to HashSet but elements in the TreeSet are sorted as per natural ordering.
+TreeSet doesn't allow any null values.
+TreeSet implemented using TreeMap internally
+TreeSet implements NavigableSet which extends SortedSet which internally extends Set Interface
 
 
 
@@ -180,6 +220,9 @@ Refernce Links:
 1.https://www.sitesbay.com/collection-framework/collection-framework-advantage
 2.Use below link to get the complete hierarchy of the collection framework
 https://www.geeksforgeeks.org/deque-interface-java-example/
+3.Internal implementation of HashSet
+https://codepumpkin.com/hashset-internal-implementation/
+
 
 
 
