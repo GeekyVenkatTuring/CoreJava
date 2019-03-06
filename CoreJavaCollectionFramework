@@ -64,6 +64,48 @@ void clear()
 List:
 
 Below the hierarchy,we find the List interface which extends Collection interface
+List is ordered collection and it gives positional access..It maintains the position order
+Basic advantage is we can store duplicate values
+ArrayList,LinkedList,Vector and Queue implements the List
+
+Along with Collection interface methods,it has different methods like
+
+void add(int index,Object o)-This method adds given element at given index
+Object get(int index)-gets the element at specified index
+Object set(int index,Object new)-this will replace the element at given index and return value is the element which got replaced
+
+Set:
+
+Set interface is the unordered collection which implements Collection.It allows duplicate values
+This is implemented by HashSet,LinkedHashSet or TreeSet
+
+Queue interface:
+It is ordered collection.This follows First In First out policy
+Elements get added to the end of the queue and gets removed from the front of the queue
+PriorityQueue and LinkedList are classes implementing this collection.These are not thread safe
+PriorityBlockingQueue is one alternative implementation to provide thread safe implementations
+Important methods:
+peek()-This method returns head of the queue
+poll()-This method removes the head of the queue and return null if the Queue is empty
+
+
+Deque interface in java:
+Deque is like double ended queue which inserts and removes the elements from both the ends
+Deque exteds Queue and it can be used as stack also
+The class which implements are Deque:
+Important methods present in the Deque are:
+addFirst(Object obj)
+addLast(Object obj)
+pollFirst(Object obj)
+pollLast(Object obj)
+poll()
+peek()
+peekFirst()
+peekLast()
+
+
+
+
 
 
 
@@ -136,7 +178,8 @@ Once the no of elements reaches initial capacity*loadfactor=16*0.75=12 elements 
 
 Refernce Links:
 1.https://www.sitesbay.com/collection-framework/collection-framework-advantage
-2.
+2.Use below link to get the complete hierarchy of the collection framework
+https://www.geeksforgeeks.org/deque-interface-java-example/
 
 
 
