@@ -143,6 +143,23 @@ TreeSet doesn't allow any null values.
 TreeSet implemented using TreeMap internally
 TreeSet implements NavigableSet which extends SortedSet which internally extends Set Interface
 
+LinkedHashSet:
+As you know HashSet is unordered,so when you iterate through HashSet it is completely unpredictable.
+To solve this problem,LinkedHashSet class is created.
+LinkedHashSet is implemented using doubly linked list.So it keeps the order of the elements when it is iterated,it gives the elements in order
+
+
+HashMap:
+
+Set keySet()
+Collection values()
+Set<Map.Entry<String,Long>> entrySet()
+
+
+TreeMap:
+
+
+
 
 
 
