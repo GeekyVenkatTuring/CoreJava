@@ -18,3 +18,125 @@ Vector-->Stack
 Set-->SortedSet
    -->AbstractSet
 
+
+
+
+Collection Framework:
+This is used for storing objects,searching objects ,soring objects and modifying objects
+
+Iterable:
+
+In Collection framework,Iterable is the parent interface and it is the root of the collections framework
+All classes implementing the Iterable interface,can you use Java for each loop
+Example of for each loop below:
+
+public void samplemethod(){
+
+List<String> animals=new ArrayList<String>();
+animals.add("cat");
+animals.add("dog");
+for(String s:animals){
+System.out.println(s);
+}
+}
+Iterable interface have only one abstract method Iterator().All collections can get hold of the Iterator and use that iterator to iterate the internal elements
+
+Collection:
+
+Below the hierarchy,we have Collections interface which exteds Iterable interface.
+Implementation classes like List and Set implements both Collection and Iterable interface
+Collection interface define the core methods that collections should have.Below are the core methods that we regularly use:
+
+1.boolean add(Object obj)
+Used to add the data to the collection and it returns true if the object is added successfully
+Question:Do you really need boolean return type for add method.
+Yes,In Set implementation,we don't allow duplicate values.If you are trying to insert duplicate value,it will return false as value already exists in the Set
+
+2.boolean addAll(Collection c)
+
+3.If you want to remove all elements in the collection,we use clear
+void clear()
+
+4.int size()
+
+5.Object[] toArray()--It will create array and store all elements of the collection into the array
+
+List:
+
+Below the hierarchy,we find the List interface which extends Collection interface
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Important points to remember:
+1.Difference between Collection and Array in Java:
+a.Array are fixed in size and we can't extend them.Collection is growable and based on the input it expands by itself
+b.Array can hold both primitives and Object.Collection can hold Object
+c.Array is more performant than Collection
+d.Array holds only homogenous elements(only one type of elements) but Collection holds both heterogenpous and homogenous elements
+
+2.How Collections grow automtically and what is the capacity of the Collection
+
+ArrayList:
+Default Size of the ArrayList before java 8 is 10 and after java 8 is 0 because they are going for lazy initialization
+Once the size is reached,it increases by oldcapacity+oldcapacity>>1
+
+HashMap:
+HashMap has capacity and load factor paramters to define the hashmap
+Default initial capacity is 2*pow(4)=16
+load factor is 0.75
+Once the no of elements reaches initial capacity*loadfactor=16*0.75=12 elements then HashMap capacity doubles
+
+3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Refernce Links:
+1.https://www.sitesbay.com/collection-framework/collection-framework-advantage
+2.
+
+
+
